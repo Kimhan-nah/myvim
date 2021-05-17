@@ -1,1 +1,1 @@
-/Users/hannkim/.vimrc
+/Users/hannkim/hanvim/.vimrc
