@@ -1,3 +1,14 @@
+call plug#begin('~/.vim/bundle')
+	" Syntax
+	Plug('dense-analysis/ale')
+
+	" File Viewer
+	Plug('preservim/nerdtree')
+
+	" 42 Header
+	Plug 'pbondoer/vim-42header'
+call plug#end()
+
 set nu
 syntax on
 set autoindent
@@ -14,7 +25,3 @@ set wmnu
 set cursorline
 
 set laststatus=2	"상태바 표시 항상
-
-call plug#begin('~/.vim/plugged')
-Plug 'pbondoer/vim-42header'
-call plug#end()
