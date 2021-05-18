@@ -5,9 +5,16 @@ call plug#begin('~/.vim/bundle')
 	" File Viewer
 	Plug('preservim/nerdtree')
 
+	" light line
+	 Plug 'itchyny/lightline.vim'
+
 	" 42 Header
 	Plug 'pbondoer/vim-42header'
 call plug#end()
+
+if !has('gui_running')
+	set t_Co=256
+endif
 
 set nu
 syntax on
@@ -19,10 +26,16 @@ set smartindent
 set cindent
 set ruler
 set ignorecase
-set hlsearch
+set hlsearch	"검색 결과 하이라이팅"
 set title
 set wmnu
 set cursorline
-set mouse=a
+set mouse=a		"마우스 사용"
+set laststatus=2	"상태바 표시 항상"
+set list listchars=tab:>-,trail:~,eol:$ "탭, 공백, 문자열 끝 표시"
 
-set laststatus=2	"상태바 표시 항상
+map nerd :NERDTreeToggle<CR> 
+
+let g:lightline = {
+	\ 'colorscheme' : 'seoul256',
+	\}
