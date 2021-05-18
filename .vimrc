@@ -32,7 +32,7 @@ set wmnu
 set cursorline
 set mouse=a		"마우스 사용"
 set laststatus=2	"상태바 표시 항상"
-set list listchars=tab:>-,trail:~,eol:$ "탭, 공백, 문자열 끝 표시"
+"set list listchars=eol:$ 문자열 끝 표시
 
 map nerd :NERDTreeToggle<CR> 
 
