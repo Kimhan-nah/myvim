@@ -23,5 +23,6 @@ set hlsearch
 set title
 set wmnu
 set cursorline
+set mouse=a
 
 set laststatus=2	"상태바 표시 항상
