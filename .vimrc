@@ -34,7 +34,7 @@ set mouse=a		"마우스 사용"
 set laststatus=2	"상태바 표시 항상"
 "set list listchars=eol:$ 문자열 끝 표시
 
-map <F5> :NERDTreeToggle<CR> 
+map nerd :NERDTreeToggle<CR> 
 
 let g:lightline = {
 	\ 'colorscheme' : 'seoul256',
