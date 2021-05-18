@@ -122,3 +122,12 @@ source ~/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# prompt_context() {
+	#if [[ "$USER" != "$DEFAULT_USER" || -n "$SSH_CLIENT" ]]; then
+		#prompt_segment black default "hannkim🌙"
+	#fi
+	#emojis=("⚡️" "🔥" "🇰" "👑" "😎" "🐸" "🐵" "🦄" "🌈" "🍻" "🚀" "💡" "🎉" "🔑" "🚦" "🌙")
+	#RAND_EMOJI_N=$(( $RANDOM % ${#emojis[@]} + 1))
+#}
+#export DEFAULT_USER="h"
