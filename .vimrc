@@ -39,3 +39,5 @@ map nerd :NERDTreeToggle<CR>
 let g:lightline = {
 	\ 'colorscheme' : 'seoul256',
 	\}
+
+highlight Comment term=bold ctermfg=60
