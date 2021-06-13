@@ -17,6 +17,9 @@ call plug#begin('~/.vim/bundle')
 	"add airline theme
 	Plug 'vim-airline/vim-airline-themes'
 
+	"indent tab line
+""	Plug 'Yggdroot/indentLine'
+
 call plug#end()
 
 if !has('gui_running')
@@ -52,6 +55,11 @@ let g:airline#extensions#tabline#left_alt_sep = '|'
 let g:airline#extensions#tabline#formatter = 'unique_tail'
 " Powerline-font 활성화
 let g:airline_powerline_fonts = 1
+" indentLine
+"let g:indentLine_concealcursor = 'inc'
+"let g:indentLine_conceallevel = 2
+"let g:indentLine_enabled = 0
+"let g:indentLine_setConceal = 0
 
 nnoremap <C-h> :bprevious!<Enter>    
 nnoremap <C-l> :bnext!<Enter>
@@ -61,7 +69,7 @@ nnoremap <C-x> :bp <BAR> bd #<Enter>
 map <C-d> :NERDTreeToggle<CR>
 "nerdtree update
 nmap <Leader>r :NERDTreeFocus<cr>R<c-w><c-p>	
-
+						
 highlight Comment term=bold ctermfg=60
 highlight LineNr  ctermfg=61
 highlight CursorLineNr cterm=bold
