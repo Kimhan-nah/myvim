@@ -42,6 +42,11 @@ set wmnu
 set cursorline
 set mouse=a		"마우스 사용"
 set laststatus=2	"상태바 표시 항상"
+
+"set foldmethod=indent	"fold based on syntax level
+"set foldnestmax=10		" 10 nested fold max
+"set nofoldenable		" no fold when open
+"set foldlevel=2
 "set list listchars=eol:$ 문자열 끝 표시
 
 "airline setting
@@ -65,6 +70,20 @@ nnoremap <C-h> :bprevious!<Enter>
 nnoremap <C-l> :bnext!<Enter>
 "현재 버퍼를 닫고 이전 버퍼로 이동
 nnoremap <C-x> :bp <BAR> bd #<Enter>  
+nnoremap <CR> zf%
+
+"============== 주석 매크로 ==============
+func! CmtOn()    "주석 on
+	exe "'<,'>norm i//"
+endfunc
+func! CmtOff()    "주석 off
+	exe "'<,'>norm 2x"
+endfunc
+
+vmap <C-_> <esc>:call CmtOn() <cr>
+vmap <C-c> <esc>:call CmtOff() <cr>
+nmap <c-_> <esc>v:call CmtOn() <cr>
+nmap <C-c> <esc>v:call CmtOff() <cr>
 
 map <C-d> :NERDTreeToggle<CR>
 "nerdtree update

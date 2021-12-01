@@ -16,7 +16,7 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH="/Users/hannkim/.oh-my-zsh"
+#export ZSH="/Users/hannkim/.-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -87,7 +87,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 plugins=(git
 	zsh-autosuggestions)
 
-source $ZSH/oh-my-zsh.sh
+#source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
@@ -116,14 +116,14 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
 # Added by c_formatter_42
+export PATH="$HOME/bin:$PATH"
 export PATH="$HOME/homebrew/bin:$PATH"
 export MAIL="hannkim@student.42seoul.kr"
 export MANPAGER="sh -c 'col -bx | bat -l man -p'"
 export TERM=xterm-256color
 alias cc='gcc -g3 -fsanitize=address -Wall -Wextra -Werror'
-alias norm='norminette -R CheckForbiddenSourceHeader'
-alias ls='lsd'
-source ~/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+alias norm='/usr/bin/norminette'
+#source ~/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
